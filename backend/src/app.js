@@ -1,8 +1,5 @@
+// oleg bergin stefani kazmirchuk
 // Project: Business Management System
-// Final Project for Full Stack - Node.js
-// Developers:
-// 1. Student A
-// 2. Student B
 
 const express = require("express");
 const cors = require("cors");

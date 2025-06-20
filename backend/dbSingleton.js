@@ -1,3 +1,4 @@
+// oleg bergin stefani kazmirchuk
 // dbSingleton.js
 const mysql = require("mysql2");
 
