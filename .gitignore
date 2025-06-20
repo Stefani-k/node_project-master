@@ -1,0 +1,38 @@
+# IDE / Editor settings
+.idea/
+.vscode/
+*.iml
+*.md
+# Java build artifacts
+/out/
+/target/
+/bin/
+*.class
+
+# Maven / Gradle
+.mvn/
+log/
+build/
+.gradle/
+*.log
+
+# OS-specific
+.DS_Store
+Thumbs.db
+
+# Node.js (если проект использует его для фронтенда)
+node_modules/
+npm-debug.log
+yarn-error.log
+dist/
+
+# Environment files
+.env
+.env.*
+
+# Coverage/test
+coverage/
+*.lcov
+
+.zip
+.claude

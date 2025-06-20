@@ -1,0 +1,61 @@
+/* --- App.css  */
+
+/* CSS Variables */
+:root {
+  --background-page: #f3e0f7;
+  --background-content: #ffffff;
+  --text-primary: #1f2937;
+  --text-secondary: #6b7280;
+  --text-on-accent: #1f2937;
+  --accent-color-primary: #a6e3a1;
+  --accent-color-primary-darker: #93cc94;
+  --border-color-light: #e5e7eb;
+  --error-background: #fee2e2;
+  --error-text: #dc2626;
+  --error-border: #fecaca;
+
+  --border-radius-small: 4px;
+  --border-radius-medium: 8px;
+  --border-radius-large: 16px;
+  --border-radius-pill: 30px;
+
+  --shadow-soft: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, "Segoe UI", "Arial", sans-serif;
+  background-color: var(--background-page);
+  color: var(--text-primary);
+  line-height: 1.6;
+}
+
+.AppContainer {
+  display: flex;
+  flex-direction: column;   /* Header → Content → Footer */
+  min-height: 100vh;
+}
+
+.content {
+  flex: 1;                    /* תופס את כל השטח בין Header→Footer */
+  display: flex;
+  flex-direction: column;     /* ציר אנכי – child יכול להתפרש לגובה מלא */
+  min-height: 0;              /* מונע גלילה כפולה */
+  padding: 0;
+}
+
+/* Ensure consistent styling across the app */
+* {
+  box-sizing: border-box;
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Focus styles for accessibility */
+*:focus-visible {
+  outline: 2px solid var(--accent-color-primary);
+  outline-offset: 2px;
+}

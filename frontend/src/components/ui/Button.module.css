@@ -1,0 +1,49 @@
+/* בסיס הכפתור */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 16px;
+  font-size: 15px;
+  font-weight: 600;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.25s, box-shadow 0.25s;
+  border: 1px solid transparent;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08);
+}
+
+.icon {
+  /* כדי שהאייקון לא ימשוך מרחק מלמעלה/למטה */
+  display: block;
+}
+
+/* 1. ברירת-מחדל (primary) */
+.btn--primary {
+  background: linear-gradient(135deg, #0077cc 0%, #005fa3 100%);
+  color: #fff;
+}
+.btn--primary:hover {
+  background: linear-gradient(135deg, #1a8aff 0%, #0070d1 100%);
+  box-shadow: 0 4px 8px rgba(0, 85, 170, 0.25);
+}
+
+/* 2. כפתור הגדרות */
+.btn--settings {
+  background: linear-gradient(135deg, #2094ff 0%, #0077cc 100%);
+  color: #fff;
+}
+.btn--settings:hover {
+  background: linear-gradient(135deg, #39a6ff 0%, #008ae6 100%);
+  box-shadow: 0 4px 8px rgba(0, 95, 190, 0.25);
+}
+
+/* 3. כפתור התנתקות */
+.btn--logout {
+  background: linear-gradient(135deg, #ff5d5d 0%, #e63636 100%);
+  color: #fff;
+}
+.btn--logout:hover {
+  background: linear-gradient(135deg, #ff7a7a 0%, #f04545 100%);
+  box-shadow: 0 4px 8px rgba(190, 0, 0, 0.25);
+}

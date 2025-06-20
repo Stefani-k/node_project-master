@@ -1,0 +1,88 @@
+/* src/components/Header/Header.module.css */
+
+.header {
+  width: 100%;
+  background: #ffffff;
+  border-bottom: 1px solid #e0e0e0;
+  display: flex;
+  justify-content: space-around;
+  /* This pushes items to the left, center, and right */
+  align-items: center;
+  padding: 8px 16px;
+  /* A little less padding for a sleeker look */
+  box-sizing: border-box;
+  height: 60px;
+  /* Give the header a fixed height */
+}
+
+/* Style for the round profile link on the left */
+.profileLink {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  /* This makes it a circle */
+  background-color: #d1c4e9;
+  /* A light purple, matching your theme */
+  color: #ffffff;
+  font-weight: bold;
+  font-size: 16px;
+  text-decoration: none;
+  transition: background-color 0.2s;
+}
+
+.profileLink:hover {
+  background-color: #b39ddb;
+  /* A slightly darker purple on hover */
+}
+
+.profileInitials {
+  text-transform: uppercase;
+}
+
+/* Navigation links container */
+.navLinks {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+/* Style for navigation buttons */
+.homeLink, .searchLink {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.5rem;
+  color: #333;
+  font-size: 24px;
+  display: flex;
+  align-items: center;
+  border-radius: 8px;
+  transition: all 0.2s ease;
+}
+
+.homeLink:hover, .searchLink:hover {
+  color: var(--accent-color-primary, #a6e3a1);
+  background-color: rgba(166, 227, 161, 0.1);
+}
+
+/* Style for the logout button on the right */
+.logoutButton {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  color: #c62828;
+  /* A shade of red for logout */
+  font-size: 26px;
+  /* Make the icon a bit smaller than home */
+  display: flex;
+  align-items: center;
+}
+
+.logoutButton:hover {
+  color: #b71c1c;
+  /* Darker red on hover */
+}

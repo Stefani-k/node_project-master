@@ -1,0 +1,269 @@
+/* src/components/UserProfilePage/UserProfilePage.module.css */
+
+/* The main container for the page, providing minimal padding and centering */
+.profilePage {
+  padding: 1rem;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+}
+
+/* Compact main card with modern styling */
+.profileCard {
+  background-color: white;
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  width: 100%;
+  max-width: 600px;
+  padding: 2rem;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  border: 1px solid #e2e8f0;
+}
+
+/* --- Compact Header Section --- */
+.profileHeader {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  margin-bottom: 0;
+  border-bottom: 1px solid #e2e8f0;
+  padding-bottom: 1.25rem;
+  text-align: center;
+}
+
+.avatar {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #a6e3a1 0%, #93dd94 100%);
+  color: #1f2937;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.25rem;
+  font-weight: 700;
+  flex-shrink: 0;
+  box-shadow: 0 2px 8px rgba(166, 227, 161, 0.3);
+}
+
+.profileHeader h2 {
+  font-size: 1.5rem;
+  margin: 0;
+  color: #1f2937;
+  font-weight: 700;
+}
+
+.email {
+  font-size: 0.875rem;
+  color: #64748b;
+  margin: 0;
+  font-weight: 500;
+}
+
+/* --- Compact Form Section --- */
+.detailsForm h3,
+.actionsSection h3 {
+  font-size: 1.125rem;
+  color: #1f2937;
+  margin-bottom: 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid #a6e3a1;
+  text-align: center;
+  font-weight: 700;
+}
+
+.detailsForm {
+  margin: 0;
+}
+
+.formGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  align-items: start;
+}
+
+.phoneField {
+  grid-column: 1 / -1;
+  direction: rtl;
+}
+
+.fieldGroup {
+  margin-bottom: 0.75rem;
+  direction: rtl;
+}
+
+.fieldGroup label {
+  display: block;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #374151;
+  margin-bottom: 0.5rem;
+}
+
+/* Cleaner disabled input styling */
+.detailsForm input:disabled {
+  background-color: #f8fafc;
+  border-color: #e2e8f0;
+  color: #1f2937;
+  cursor: default;
+  box-shadow: none;
+}
+
+.editActions {
+  text-align: center;
+  margin-top: 1rem;
+  grid-column: 1 / -1;
+}
+
+/* --- Responsive Design --- */
+@media (max-width: 768px) {
+  .profilePage {
+    padding: 0.5rem;
+    align-items: flex-start;
+  }
+  
+  .profileCard {
+    padding: 1.5rem;
+    max-width: 100%;
+    margin-top: 1rem;
+  }
+  
+  .formGrid {
+    grid-template-columns: 1fr;
+    gap: 0.75rem;
+  }
+
+  .phoneField {
+    grid-column: 1;
+  }
+
+  .profileHeader {
+    padding-bottom: 1rem;
+  }
+  
+  .avatar {
+    width: 45px;
+    height: 45px;
+    font-size: 1.125rem;
+  }
+  
+  .profileHeader h2 {
+    font-size: 1.25rem;
+  }
+}
+
+.saveCancelGroup {
+  display: flex;
+  gap: 0.75rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* Modern cancel button styling */
+.cancelButton {
+  background-color: #f1f5f9;
+  color: #64748b;
+  border: 1px solid #cbd5e1;
+}
+
+.cancelButton:hover {
+  background-color: #e2e8f0;
+  color: #475569;
+  border-color: #94a3b8;
+}
+
+/* --- Centered Content Container --- */
+.mainContent {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  align-items: center;
+}
+
+.leftSection {
+  width: 100%;
+}
+
+.rightSection {
+  width: 100%;
+}
+
+/* --- Compact Actions Section --- */
+.actionsSection {
+  margin-top: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  align-items: center;
+}
+
+.actionLink {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1rem;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  text-decoration: none;
+  color: #374151;
+  font-weight: 500;
+  transition: all 0.2s ease;
+  cursor: pointer;
+  background: none;
+}
+
+.actionLink:hover {
+  background-color: #f8fafc;
+  border-color: #cbd5e1;
+  transform: translateY(-1px);
+}
+
+/* Compact logout button */
+.logoutButton {
+  width: 100%;
+  max-width: 200px;
+  justify-content: center;
+  font-size: 0.875rem;
+  color: #dc2626;
+  background-color: #fff;
+  border-color: #fecaca;
+}
+
+.logoutButton:hover {
+  background-color: #fef2f2;
+  color: #dc2626;
+  border-color: #dc2626;
+}
+
+/* Loading and error states */
+.loading, .error {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 200px;
+  padding: 2rem;
+  text-align: center;
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.loading {
+  color: #64748b;
+}
+
+.error {
+  color: #dc2626;
+  background-color: #fef2f2;
+  border: 1px solid #fecaca;
+  border-radius: 8px;
+  max-width: 400px;
+  margin: 2rem auto;
+}

@@ -1,0 +1,208 @@
+/* src/components/Forms/Form.module.css */
+/* This file contains common styles for form containers, inputs, buttons, and links. */
+
+/* --- Main Form Container --- */
+/* Used for both Login and SignUp forms */
+.formContainer {
+  display: flex;
+  flex-direction: column;
+  padding: 2rem 2.5rem;
+  /* Padding inside the form */
+  background-color: white;
+  border-radius: 16px;
+  /* Rounded corners */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  /* Soft shadow for depth */
+  max-width: 420px;
+  /* Default max width, good for login form */
+  margin: 1rem auto;
+  /* Center the form horizontally with some vertical margin */
+  width: 90%;
+  /* Responsive width for mobile */
+  box-sizing: border-box;
+  /* Ensures padding doesn't add to the width */
+}
+
+/* --- Typography --- */
+.title {
+  color: #333;
+  margin-bottom: 0.75rem;
+  font-size: 2rem;
+  font-weight: 600;
+  /* Semi-bold */
+  text-align: center;
+}
+
+.subtitle {
+  color: #555;
+  margin-bottom: 2rem;
+  text-align: center;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  /* Improves readability */
+}
+
+/* --- Feedback Messages --- */
+/* Used for displaying errors or success messages */
+.errorMessage,
+.successMessage {
+  width: 100%;
+  text-align: center;
+  padding: 0.6rem;
+  margin-bottom: 1rem;
+  border-radius: 6px;
+  font-size: 0.9rem;
+}
+
+.errorMessage {
+  color: #D8000C;
+  /* Strong red for error text */
+  background-color: #FFD2D2;
+  /* Light red background */
+}
+
+.successMessage {
+  color: #4F8A10;
+  /* Green for success text */
+  background-color: #DFF2BF;
+  /* Light green background */
+}
+
+
+/* --- Input Fields --- */
+/* Common style for all text/email/password inputs */
+.inputField {
+  width: 100%;
+  padding: 0.9rem 1rem;
+  margin-bottom: 1rem;
+  /* Space between fields in a single column layout */
+  border: 1px solid #dcdcdc;
+  /* Light grey border */
+  border-radius: 8px;
+  /* Slightly rounded corners */
+  box-sizing: border-box;
+  font-size: 1rem;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.inputField:focus {
+  border-color: #a6e3a1;
+  /* Highlight with accent color on focus */
+  box-shadow: 0 0 0 2px rgba(166, 227, 161, 0.3);
+  /* Add a subtle glow */
+  outline: none;
+  /* Remove default browser outline */
+}
+
+/* --- Input Grid for Multi-column Layouts (like SignUp) --- */
+.inputGrid {
+  display: grid;
+  width: 100%;
+  grid-template-columns: 1fr;
+  /* Mobile default: 1 column */
+  gap: 1rem;
+  /* Space between grid items */
+  margin-bottom: 1.5rem;
+  /* Space below the grid, before the main button */
+}
+
+/* On wider screens, switch to a 2-column layout */
+@media (min-width: 600px) {
+  .inputGrid {
+    grid-template-columns: repeat(2, 1fr);
+    /* 2 equal columns */
+    gap: 1rem 1.5rem;
+    /* Row gap and Column gap */
+  }
+
+  /* When inputs are in a grid, the grid's 'gap' handles spacing,
+     so we can remove the individual margin-bottom from them. */
+  .inputGrid .inputField {
+    margin-bottom: 0;
+  }
+}
+
+/* --- Buttons --- */
+/* Main Submit Button (e.g., "Login", "Sign Up") */
+.submitButton {
+  width: 100%;
+  padding: 0.9rem 1.5rem;
+  margin-top: 1.5rem;
+  /* Increased space above the main button */
+  background-color: #a6e3a1;
+  /* Primary accent green */
+  color: #3a6b35;
+  /* Darker green for text contrast */
+  border: none;
+  border-radius: 30px;
+  /* Pill-like shape */
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 1.05rem;
+  text-align: center;
+  transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+.submitButton:hover {
+  background-color: #93cc94;
+  /* Slightly darker on hover */
+}
+
+.submitButton:active {
+  transform: scale(0.98);
+  /* Click effect */
+}
+
+.submitButton:disabled {
+  background-color: #e0e0e0;
+  /* Greyed out when disabled */
+  color: #a0a0a0;
+  cursor: not-allowed;
+}
+
+/* --- Quick Login Buttons (for development/testing) --- */
+/* Container for the quick fill buttons */
+.quickLoginContainer {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-top: -0.5rem;
+  /* Pull closer to fields above */
+  margin-bottom: 1rem;
+  /* Space below before the main button */
+}
+
+/* Style for each individual quick fill button */
+.quickLoginButton {
+  background-color: #f0f0f0;
+  color: #555;
+  border: 1px solid #dcdcdc;
+  padding: 0.4rem 0.8rem;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.quickLoginButton:hover {
+  background-color: #e0e0e0;
+  color: #333;
+}
+
+/* --- Helper Link --- */
+/* Link to switch between Login and SignUp pages */
+.switchLink {
+  margin-top: 1.5rem;
+  color: #007bff;
+  /* Standard link blue */
+  text-decoration: none;
+  font-size: 0.9rem;
+  text-align: center;
+  width: 100%;
+}
+
+.switchLink:hover {
+  text-decoration: underline;
+}
